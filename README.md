@@ -1,6 +1,13 @@
 # tableViewer
 Backbone.js Collection View example with CartoDB Tables
 
+You can use this data to check app:
+
+- user name:documentation
+- table name:buildings_1854
+ 
+- user name:rambo-test
+- table name:public.mnmappluto
 
 Decisions taken during the development:
 
