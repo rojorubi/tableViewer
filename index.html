@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+    <script type="text/javascript" src="http://backbonejs.org/backbone-min.js"></script>
+    <script type="text/javascript" src="models.js"></script>
+    <script type="text/javascript" src="views.js"></script>
+    <script type="text/javascript" src="router.js"></script>
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body>
+    <div class="container" style="padding-top: 5em;">
+      <div class="panel panel-primary"></div>
+        <div class="panel-heading">
+          <h3 class="panel-title"><font color="#62A2D2">CartoDB</font> Table viewer</h3>
+          <div class="input-group">
+            <input id="user_input" name="user_input" type="text" class="form-control" placeholder="Username..." aria-describedby="basic-addon2">
+            <input id="tablename_input" name="tablename_input" type="text" class="form-control" placeholder="Table name..." aria-describedby="basic-addon2">
+            <button id="button_load" onclick="checkData();" type="button" class="btn btn-primary">LOAD DATA</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <p></p>
+        </div>
+        <table class="table table-hover">
+          <thead class="thead-inverse">
+            <tr id="misth"></tr>
+          </thead>
+          <tbody id="mitbody">
+          </tbody>
+        </table>
+        <div id="error_div" style="display:none" class="alert alert-danger" role="alert">
+          <strong>An error has occurred,</strong> try again!
+        </div>
+        <div>
+          <div id="page_info" style="display:none" class="alert alert-info" role="alert"></div>
+          <button id="btn_prev" onclick="prevPage();" style="display:none" type="button" class="btn btn-primary">PREVIOUS</button>
+          <button id="btn_next" onclick="nextPage();" style="display:none" type="button" class="btn btn-primary">NEXT</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
